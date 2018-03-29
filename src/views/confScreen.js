@@ -13,7 +13,8 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgb(224,234,254)'
   },
   listContent: {
-    marginTop: 30
+    marginTop: 30,
+    paddingBottom: 40
   }
 })
 

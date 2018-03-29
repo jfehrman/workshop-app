@@ -36,45 +36,45 @@ export class TalkDetails extends React.Component {
     } = this.props.talk
     return (
       <View style={{flex: 1, justifyContent: 'center', backgroundColor: 'purple'}}>
-      <View style={styles.container}>
-        <View style={{justifyContent: 'center', alignItems: 'center'}}>
-          <Image style={styles.image} source={{uri: avatarUrl}} />
-        </View>
-        <View style={styles.topContainer}>
-          <View style={styles.topText}>
-            <Text style={styles.topHeader}>TALK</Text>
-            <Text style={styles.talkTitle}>{talkTitle}</Text>
-            <Text style={styles.talkDescription}>{talkDescription}</Text>
+        <View style={styles.container}>
+          <View style={{justifyContent: 'center', alignItems: 'center'}}>
+            <Image style={styles.image} source={{uri: avatarUrl}} />
           </View>
-          <View style={styles.topText}>
-            <Text style={styles.topHeader}>ABOUT</Text>
-            <Text style={styles.talkTitle}>{speakerName}</Text>
-            <Text style={styles.talkDescription}>{aboutDescription}</Text>
-          </View>
-        </View>
-        <View style={{flexDirection: 'row', alignItems: 'center', paddingLeft: 20, paddingBottom: 20}}>
-          <Image style={{width: 50, height: 50 }}source={require('../images/twitter-logo.png')}/>
-          <Image style={{width: 30, height: 30, marginLeft: 20 }}source={require('../images/github-logo.png')}/>
-        </View>
-        <View style={styles.bottomContainer}>
-          <View style={{flexDirection: 'row', flex: 1}}>
-            <View style={styles.bottomItemWrapper}>
-              <Text style={styles.bottomTitle}>Start</Text>
-              <Text style={styles.bottomSubtitle}>{startTime}</Text>
+          <View style={styles.topContainer}>
+            <View style={styles.topText}>
+              <Text style={styles.topHeader}>TALK</Text>
+              <Text style={styles.talkTitle}>{talkTitle}</Text>
+              <Text style={styles.talkDescription}>{talkDescription}</Text>
             </View>
-            <View style={[styles.bottomItemWrapper, {paddingLeft: 20}]}>
-              <Text style={styles.bottomTitle}>Duration</Text>
-              <Text style={styles.bottomSubtitle}>{duration}</Text>
+            <View style={styles.topText}>
+              <Text style={styles.topHeader}>ABOUT</Text>
+              <Text style={styles.talkTitle}>{speakerName}</Text>
+              <Text style={styles.talkDescription}>{aboutDescription}</Text>
             </View>
           </View>
-          <View style={{flexDirection: 'row', flex: 1, justifyContent: 'flex-end'}}>
-            <View style={[styles.bottomItemWrapper, {paddingRight: 20}]}>
+          <View style={{flexDirection: 'row', alignItems: 'center', paddingLeft: 20, paddingBottom: 20}}>
+            <Image style={{width: 50, height: 50 }}source={require('../images/twitter-logo.png')}/>
+            <Image style={{width: 30, height: 30, marginLeft: 20 }}source={require('../images/github-logo.png')}/>
+          </View>
+          <View style={styles.bottomContainer}>
+            <View style={{flexDirection: 'row', flex: 1}}>
+              <View style={styles.bottomItemWrapper}>
+                <Text style={styles.bottomTitle}>Start</Text>
+                <Text style={styles.bottomSubtitle}>{startTime}</Text>
+              </View>
+              <View style={[styles.bottomItemWrapper, {paddingLeft: 20}]}>
+                <Text style={styles.bottomTitle}>Duration</Text>
+                <Text style={styles.bottomSubtitle}>{duration}</Text>
+              </View>
             </View>
-            <View style={styles.bottomItemWrapper}>
+            <View style={{flexDirection: 'row', flex: 1, justifyContent: 'flex-end'}}>
+              <View style={[styles.bottomItemWrapper, {paddingRight: 20}]}>
+              </View>
+              <View style={styles.bottomItemWrapper}>
+              </View>
             </View>
           </View>
         </View>
-      </View>
       </View>
     );
   }
@@ -93,7 +93,6 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     paddingHorizontal: 20,
-    marginTop: -60
   },
   topHeader: {
     fontSize: 13,
@@ -115,10 +114,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   image: {
-    width: 100,
+    height: 100,
     aspectRatio: 1,
     borderRadius: 50,
-    bottom: 50
+    marginTop: 10
   },
   bottomContainer: {
     paddingHorizontal: 20,
